@@ -49,8 +49,17 @@ img {
   object-fit: contain;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  min-width: 1280px;
+  min-height: 100%;
   margin: 0;
+  padding: 0 40px;
 
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
@@ -58,10 +67,15 @@ body {
   font-weight: 400;
   color: #000000;
 
-  background-color: #ffffff;
+  background-color: #f2f2f2;
 }
 
-/* .visually-hidden {
+.main-container {
+  flex-grow: 1;
+}
+
+.visually-hidden {
   position: absolute;
   transform: scale(0);
-} */
+}
+
