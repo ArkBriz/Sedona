@@ -116,6 +116,7 @@ body {
 .page-header {
   display: flex;
   padding: 0 70px;
+  z-index: 1;
 }
 
 .logo-link {
@@ -175,6 +176,7 @@ body {
 
 .index-main {
   margin: 0 auto;
+  margin-top: -4px;
 }
 
 .page-offer {
@@ -351,12 +353,17 @@ body {
 }
 
 .breadscrumbs {
+  display: flex;
   margin: 0;
   margin-bottom: 45px;
   padding: 0;
 
   font-size: 16px;
   list-style-type: none;
+}
+
+.breadscrumbs-item {
+  margin-right: 26px;
 }
 
 /* Filters */
@@ -366,6 +373,8 @@ body {
 }
 
 .filter-group {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
 
@@ -393,6 +402,19 @@ body {
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
+}
+
+.control {
+  padding-left: 39px;
+}
+
+.control:not(:last-child) {
+  margin-bottom: 13px;
+}
+
+.buttons-group .button {
+  margin-top: 60px;
+  margin-bottom: 22px;
 }
 
 /* Sorting */
