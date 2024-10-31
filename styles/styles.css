@@ -114,10 +114,23 @@ body {
 /* Header */
 
 .page-header {
+  display: flex;
   padding: 0 70px;
 }
 
+.logo-link {
+  margin-right: 30px;
+}
+
+.nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .nav-list {
+  display: flex;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -172,9 +185,16 @@ body {
 }
 
 .advantages-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+.advantages-large-item {
+  grid-column: 1/-1;
 }
 
 .advantages-heading {
@@ -225,19 +245,25 @@ body {
 
 .subscribe {
   padding: 94px;
-
+  color: #ffffff;
   background-image: url("../images/backgrounds/subscribe-bg.jpg");
 }
 
 .subscribe .section-text {
   margin-bottom: 46px;
+  color: #ffffff;
 }
 
 .catalog-subscribe {
   margin-bottom: 107px;
   padding: 34px;
 
+  color: #000000;
   background-image: none;
+}
+
+.catalog-subscribe .section-text {
+  color: #333333;
 }
 
 
@@ -272,11 +298,30 @@ body {
 
 /* Filters */
 
+.filters-form {
+  display: flex;
+}
+
 .filter-group {
   margin: 0;
   padding: 0;
 
   border: none;
+}
+
+.infra-group {
+  width: 150px;
+  margin-right: 67px;
+}
+
+.living-group {
+  width: 150px;
+  margin-right: 30px;
+}
+
+.price-group {
+  width: 287px;
+  margin-left: auto;
 }
 
 .filter-group-title {
@@ -294,15 +339,21 @@ body {
 }
 
 .sorting-container {
+  display: flex;
   margin-bottom: 56px;
 }
 
 .hotels-section-title {
   margin: 0;
+  margin-right: auto;
 
   font-size: 30px;
   line-height: 39px;
   text-transform: uppercase;
+}
+
+.view-buttons-container {
+  margin-left: 81px;
 }
 
 .view-button {
@@ -315,6 +366,10 @@ body {
 /* Hotels */
 
 .hotels-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px 18px;
+
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -362,10 +417,21 @@ body {
 
 /* Pagination */
 
+.pag {
+  display: flex;
+  justify-content: space-between;
+}
+
 .pag-list {
+  display: flex;
+  width: 640px;
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+.pag-item:not(:first-child) {
+  margin-left: 8px;
 }
 
 .pag .button {
@@ -382,6 +448,9 @@ body {
 /* Footer */
 
 .page-footer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
   padding: 40px 70px;
 }
 
