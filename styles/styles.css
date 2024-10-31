@@ -461,26 +461,67 @@ body {
 }
 
 .hotel-card {
+  display: grid;
+  grid-template-columns: 1fr 26px 1fr;
+  row-gap: 16px;
+  width: 340px;
+
   margin-bottom: 50px;
+  padding: 20px;
 }
 
 .hotel-card-link {
+  display: grid;
+  grid-column: 1/-1;
   text-decoration: none;
 }
 
 .hotel-card-title {
   margin: 0;
+  justify-self: start;
 
   font-size: 24px;
   line-height: 31px;
   color: #000000;
 }
 
+.hotel-card-img {
+  margin-bottom: 16px;
+  order: -1;
+}
+
 .hotel-card p {
+  justify-self: start;
   margin: 0;
 }
 
+.hotel-card-price {
+  grid-column: 3/4;
+}
+
+.hotel-card .button {
+  width: 133px;
+}
+
+.hotel-card .button-light {
+  grid-column: 3/4;
+  width: 141px;
+}
+
+.hotel-rating {
+  justify-self: end;
+  grid-column: 1/-1;
+  width: 160px;
+  height: 37px;
+}
+
 .hotel-rating-text {
+  width: 160px;
+  padding-top: 9px;
+  padding-bottom: 10px;
+
+  background-color: #f2f2f2;
+  border-radius: 4px;
   font-size: 16px;
   text-transform: uppercase;
 }
