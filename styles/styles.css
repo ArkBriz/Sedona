@@ -561,13 +561,20 @@ body {
 }
 
 .pag .button {
-  width: 55px;
-  height: 55px;
-  padding: 17px 15px;
+  display: block;
+  min-width: 55px;
+  min-height: 55px;
+  padding: 20px 16px;
 
   font-size: 20px;
-  line-height: 26px;
+  line-height: 15px;
   text-align: center;
+}
+
+.pag .button-current {
+  color: #000000;
+  background-color: #f2f2f2;
+  cursor: auto;
 }
 
 
