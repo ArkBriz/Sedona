@@ -701,14 +701,13 @@ body {
 
 .socials {
   display: flex;
+  flex-wrap: wrap;
+  max-width: 360px;
   align-items: center;
 }
 
-.socials-link {
-  width: 18px;
-  height: 15px;
-
-  outline: 1px solid #000;
+.socials-link:not(:last-child) {
+  margin-right: 30px;
 }
 
 .phone {
