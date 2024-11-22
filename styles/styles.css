@@ -519,6 +519,7 @@ body {
 .price-group {
   width: 287px;
   margin-left: auto;
+  margin-right: 82px;
 }
 
 .filter-group-title {
@@ -530,11 +531,56 @@ body {
 }
 
 .control {
+  position: relative;
   padding-left: 39px;
 }
 
 .control:not(:last-child) {
   margin-bottom: 13px;
+}
+
+.infra-group .control-mark {
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+input[type="checkbox"]:checked + .control-mark::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 12px;
+  height: 10px;
+  background-image: url("../images/icons/checkmark.svg");
+  content: "";
+}
+
+.living-group .control-mark {
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 10px;
+  height: 10px;
+  background-image: url("../images/icons/radiomark.svg");
+  content: "";
 }
 
 .buttons-group .button {
