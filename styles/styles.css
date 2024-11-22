@@ -475,7 +475,20 @@ body {
 }
 
 .breadscrumbs-item {
+  position: relative;
   margin-right: 26px;
+}
+
+.breadscrumbs-item:not(:last-child)::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -18px;
+  margin: auto;
+  width: 6px;
+  height: 8px;
+  background-image: url("../images/icons/arrow-right.svg");
+  content: "";
 }
 
 /* Filters */
