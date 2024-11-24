@@ -58,8 +58,8 @@
         <ul class="breadscrumbs">
           <li class="breadscrumbs-item">
             <a class="breadscrumbs-link" href="index.html">
-              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12"><g fill="#fff" clip-path="url(#a)">
-                <path d="M6 .3 0 5.8V12h12V5.8L6 .3ZM11 11H1V6.2l5-4.5 5 4.5V11Z"/><path d="M4 10h1V7.5h2V10h1V6.5H4V10Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h12v12H0z"/></clipPath></defs>
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#fff" viewBox="0 0 12 12"><g clip-path="url(#a)">
+                <path d="M6 .3 0 5.8V12h12V5.8L6 .3ZM11 11H1V6.2l5-4.5 5 4.5V11Z"/><path d="M4 10h1V7.5h2V10h1V6.5H4V10Z"/></g><defs><clipPath id="a"><path d="M0 0h12v12H0z"/></clipPath></defs>
               </svg>
               <span class="visually-hidden">На главную</span>
             </a>
@@ -158,7 +158,7 @@
           </form>
 
           <div class="view-buttons-container">
-            <a class="view-button tile-view view-button-active" href="#">
+            <a class="view-button tile-view view-button-active">
               <span class="visually-hidden">Плитка</span>
             </a>
             <a class="view-button slide-view" href="#">
@@ -239,7 +239,7 @@
         <div class="pag">
           <ol class="pag-list">
             <li class="pag-item">
-              <a class="button button-light button-current" href="#">1</a>
+              <a class="button button-light button-current">1</a>
             </li>
             <li class="pag-item">
               <a class="button button-light" href="#">2</a>
@@ -275,6 +275,7 @@
 
         <form class="subscribe-form" action="https://echo.htmlacademy.ru">
           <label class="visually-hidden" for="email">Введите ваш email</label>
+          <!-- для показа ошибки ввода поля добавить класс field-error -->
           <input class="field" type="email" id="email" name="email" placeholder="Ваш e-mail" required>
           <button class="button button-light" type="submit">Подписаться</button>
         </form>

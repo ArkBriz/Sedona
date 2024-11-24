@@ -498,9 +498,9 @@ body {
   outline: 3px solid #83b3d3;
 }
 
-/* .field:invalid {
+.field-error {
   outline: 2px solid #ff5757;
-} */
+}
 
 .field::placeholder {
   font-family: "PT Sans" sans-serif;
@@ -550,28 +550,59 @@ body {
 .breadscrumbs {
   display: flex;
   margin: 0;
+  margin-left: -5px;
   margin-bottom: 45px;
   padding: 0;
 
+  font-family: "PT Sans", sans-serif;
   font-size: 16px;
+  line-height: 21px;
   list-style-type: none;
 }
 
 .breadscrumbs-item {
   position: relative;
-  margin-right: 26px;
+  margin-right: 10px;
 }
 
 .breadscrumbs-item:not(:last-child)::after {
   position: absolute;
   top: 0;
   bottom: 0;
-  right: -18px;
+  right: -11px;
   margin: auto;
   width: 6px;
   height: 8px;
   background-image: url("../images/icons/arrow-right.svg");
+  background-repeat: no-repeat;
   content: "";
+}
+
+.breadscrumbs-link {
+  padding: 3px 8px;
+
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.breadscrumbs-link:hover svg,
+.breadscrumbs-link:not(.breadscrumbs-link-current):hover {
+  color: rgb(255, 255, 255, 0.6);
+  fill: rgb(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+
+.breadscrumbs-link:not(.breadscrumbs-link-current):focus {
+  outline: 3px solid #83b3d3;
+  outline-offset: -3px;
+  border-radius: 4px;
+}
+
+.breadscrumbs-link:active svg,
+.breadscrumbs-link:not(.breadscrumbs-link-current):active {
+  color: rgb(255, 255, 255, 0.3);
+  fill: rgb(255, 255, 255, 0.3);
+  outline: none;
 }
 
 /* Filters */
@@ -631,6 +662,15 @@ body {
   height: 20px;
   border-radius: 4px;
   background-color: #ffffff;
+  cursor: pointer;
+}
+
+.infra-group .control-mark:hover {
+  background-color: rgb(255, 255, 255, 0.6);
+}
+
+.infra-group .control-mark:active {
+  background-color: rgb(255, 255, 255, 0.3);
 }
 
 input[type="checkbox"]:checked + .control-mark::before {
@@ -653,6 +693,7 @@ input[type="checkbox"]:checked + .control-mark::before {
   height: 20px;
   border-radius: 50%;
   background-color: #ffffff;
+  cursor: pointer;
 }
 
 input[type="radio"]:checked + .control-mark::before {
@@ -666,6 +707,10 @@ input[type="radio"]:checked + .control-mark::before {
   height: 10px;
   background-image: url("../images/icons/radiomark.svg");
   content: "";
+}
+
+input:focus + .control-mark {
+  outline: 3px solid #83b3d3;
 }
 
 /* Price fields */
@@ -719,6 +764,36 @@ input[type="radio"]:checked + .control-mark::before {
   border-bottom-right-radius: 4px;
 }
 
+.min-price:hover .price-field {
+  position: relative;
+  border-color: #b2b9bc;
+  z-index: 1;
+}
+
+.max-price:hover .price-field {
+  position: relative;
+  border-color: #b2b9bc;
+  z-index: 1;
+}
+
+.min-price .price-field:focus {
+  position: relative;
+  outline: 3px solid #83b3d3;
+  box-shadow: inset 0 0 0 3px #83b3d3;
+  z-index: 1;
+}
+
+.max-price .price-field:focus {
+  position: relative;
+  outline: 3px solid #83b3d3;
+  box-shadow: inset 0 0 0 3px #83b3d3;
+  z-index: 1;
+}
+
+.price-field:active {
+  background-color: #756257;
+}
+
 .price-label {
   position: absolute;
   top: 12px;
@@ -734,7 +809,6 @@ input[type="radio"]:checked + .control-mark::before {
   height: 4px;
   border-radius: 4px;
   background-color:rgba(255, 255, 255, 0.3);
-
 }
 
 .range-bar {
@@ -753,6 +827,19 @@ input[type="radio"]:checked + .control-mark::before {
   border: none;
   border-radius: 5px;
   background-color: #ffffff;
+}
+
+.range-toggle:hover {
+  box-shadow: 0 4px 10px rgb(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.range-toggle:focus {
+  outline: 3px solid #83b3d3;
+}
+
+.range-toggle:active {
+  outline: 2px solid #83b3d3;
 }
 
 .toogle-min {
@@ -777,12 +864,36 @@ input[type="radio"]:checked + .control-mark::before {
   line-height: 100%;
 }
 
+.buttons-group .button:focus {
+  outline: 3px solid #ffffff;
+}
+
+.buttons-group .button:active {
+  outline: none;
+}
+
 .reset-button {
+  padding: 4px 9px;
+
   font-size: 18px;
   color: #ffffff;
   background-color: transparent;
   border: none;
   cursor: pointer;
+}
+
+.reset-button:hover {
+  color: rgb(255, 255, 255, 0.6);
+}
+
+.reset-button:focus {
+  outline: 3px solid #83b3d3;
+  border-radius: 4px;
+}
+
+.reset-button:active {
+  color: rgb(255, 255, 255, 0.3);
+  outline: none;
 }
 
 /* Sorting */
@@ -821,6 +932,17 @@ input[type="radio"]:checked + .control-mark::before {
   appearance: none;
 }
 
+.sorting-select:hover,
+.sorting-select:focus {
+  border: 2px solid #83b3d3;
+  outline: none;
+}
+
+.sorting-select:active {
+  color: rgb(0, 0, 0, 0.3);
+  border: 2px solid #e6e6e6;
+}
+
 .view-buttons-container {
   margin-left: 81px;
 }
@@ -854,6 +976,12 @@ input[type="radio"]:checked + .control-mark::before {
   background-image: url("../images/icons/list.svg");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.view-button:not(.view-button-active):hover,
+.view-button:not(.view-button-active):focus {
+  border: 2px solid #83b3d3;
+  outline: none;
 }
 
 /* Hotels */
@@ -898,6 +1026,32 @@ input[type="radio"]:checked + .control-mark::before {
   order: -1;
 }
 
+.hotel-card-link:hover .hotel-card-img {
+  opacity: 60%;
+}
+
+.hotel-card-link:focus {
+  outline: none;
+  text-decoration: underline;
+}
+
+.hotel-card-link:focus .hotel-card-img {
+  outline: 3px solid #83b3d3;
+}
+
+.hotel-card-link:active {
+  text-decoration: none;
+}
+
+.hotel-card-link:active .hotel-card-img {
+  opacity: 30%;
+  outline: none;
+}
+
+.hotel-card-link:active .hotel-card-title {
+  color: rgb(0, 0, 0, 0.3);
+}
+
 .hotel-card p {
   justify-self: start;
   margin: 0;
@@ -918,6 +1072,11 @@ input[type="radio"]:checked + .control-mark::before {
 
 .button-chosen {
   background-color: #7db54f;
+}
+
+.button-chosen:hover,
+.button-chosen:focus {
+  background-color: #6C9E42;
 }
 
 .hotel-rating {
@@ -1022,6 +1181,17 @@ input[type="radio"]:checked + .control-mark::before {
   background-repeat: no-repeat;
   background-position: center right 20px;
   appearance: none;
+}
+
+.amount-select:hover,
+.amount-select:focus {
+  border: 2px solid #83b3d3;
+  outline: none;
+}
+
+.amount-select:active {
+  color: rgb(0, 0, 0, 0.3);
+  border: 2px solid #e6e6e6;
 }
 
 
