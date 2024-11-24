@@ -105,6 +105,33 @@ body {
   background-color: #83b3d3;
 }
 
+.button:hover {
+  background-color: #615048;
+}
+
+.button:focus {
+  outline: 3px solid #83b3d3;
+  outline-offset: -1px;
+}
+
+.button:active {
+  outline: none;
+  color: rgb(255, 255, 255, 0.3);
+}
+
+.button-light:hover {
+  background-color: #68a2ca;
+}
+
+.button-light:focus {
+  background-color: #68a2ca;
+  outline: 3px solid #756257;
+}
+
+.button-light:active {
+  outline: none;
+}
+
 .visually-hidden {
   position: absolute;
   transform: scale(0);
@@ -157,6 +184,18 @@ body {
   font-weight: 700;
   color: #000000;
   text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #756257;
+}
+
+.nav-link:hover svg {
+  fill: #756257;
+}
+
+.nav-link:active {
+  color: rgb(117, 98, 87, 0.3);
 }
 
 .nav-link-current::before {
@@ -449,6 +488,19 @@ body {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
+
+.field:hover {
+  background-color: #e6e6e6;
+}
+
+.field:focus {
+  background-color: #e6e6e6;
+  outline: 3px solid #83b3d3;
+}
+
+/* .field:invalid {
+  outline: 2px solid #ff5757;
+} */
 
 .field::placeholder {
   font-family: "PT Sans" sans-serif;
@@ -989,13 +1041,67 @@ input[type="radio"]:checked + .control-mark::before {
   align-items: center;
 }
 
+.socials-link {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
 .socials-link:not(:last-child) {
-  margin-right: 30px;
+  margin-right: 8px;
+}
+
+.socials-link svg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.socials-link:hover svg {
+  fill: #68a2ca;
+}
+
+.socials-link:active svg {
+  fill: rgb(104, 162, 202, 0.3);
 }
 
 .phone {
+  padding: 15px;
+
   font-size: 40px;
   line-height: 40px;
   color: #000000;
   text-decoration: none;
+}
+
+.phone:hover {
+  color: #756257;
+}
+
+.phone:active {
+  color: rgb(117, 98, 87, 0.3);
+}
+
+.dev-logo {
+  padding: 18px 22px;
+}
+
+.dev-logo:hover svg {
+  fill: #756257;
+}
+
+.dev-logo:active svg {
+  fill: rgb(117, 98, 87, 0.3);
+}
+
+.page-footer a:focus {
+  outline: 3px solid #83b3d3;
+  border-radius: 10px;
+}
+
+.page-footer a:active {
+  outline: none;
 }
