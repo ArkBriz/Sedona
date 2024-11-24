@@ -34,6 +34,63 @@
               </svg>
               <span class="visually-hidden">Поиск по сайту</span>
             </a>
+
+            <div class="modal-container">
+              <div class="modal-search">
+                <div class="heading-wrapper">
+                  <h2 class="modal-search-title">Поиск гостиниц в Седоне</h2>
+                  <button class="close-button" type="button">
+                    <span class="visually-hidden">Закрыть окно</span>
+                  </button>
+                </div>
+
+                <form class="search-form" action="https://echo.htmlacademy.ru">
+                  <div class="search-form-group">
+                    <label class="search-form-label" for="check-in">Дата заезда:</label>
+                    <input class="field date-field" type="text" id="chech-in" name="check-in-date" value="27 апреля 2020" required>
+                  </div>
+
+                  <div class="search-form-group">
+                    <label class="search-form-label" for="check-out">Дата выезда:</label>
+                    <input class="field date-field" type="text" id="chech-out" name="check-out-date" value="1 сентября 2021" required>
+                  </div>
+
+                  <div class="search-form-group">
+                    <div class="amount-wrapper">
+                      <label class="search-form-label" for="adults">Взрослые:</label>
+                      <div class="counter">
+                        <button class="counter-button counter-minus" type="button">
+                          <span class="visually-hidden">Уменьшить количество</span>
+                        </button>
+                        <input class="field amount-field" type="number" id="adults" name="adults-amount" value="2">
+                        <button class="counter-button counter-plus" type="button">
+                          <span class="visually-hidden">Увеличить количество</span>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="amount-wrapper">
+                      <label class="search-form-label" for="kids">Дети:
+                        <span class="info">
+                          <span class="visually-hidden">Дополнительная информация</span>
+                        </span>
+                      </label>
+                      <div class="counter">
+                        <button class="counter-button counter-minus" type="button">
+                          <span class="visually-hidden">Уменьшить количество</span>
+                        </button>
+                        <input class="field amount-field" type="number" id="kids" name="kids-amount" value="1">
+                        <button class="counter-button counter-plus" type="button">
+                          <span class="visually-hidden">Увеличить количество</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <a class="button button-light" href="#">Найти</a>
+                </form>
+              </div>
+            </div>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">
