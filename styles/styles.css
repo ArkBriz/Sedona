@@ -255,6 +255,10 @@ body {
   background-color: rgba(242, 242, 242, 0.8);
 }
 
+.modal-close {
+  display: none;
+}
+
 .modal-search {
   width: 715px;
   margin: auto;
@@ -282,15 +286,40 @@ body {
 }
 
 .close-button {
+  position: relative;
   width: 53px;
   height: 53px;
   padding: 0;
 
-  background-image: url("../images/icons/close.svg");
-  background-repeat: no-repeat;
-  background-position: center;
   border: none;
   border-radius: 50%;
+  cursor: pointer;
+}
+
+.close-button svg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.close-button:hover {
+  background-color: #e6e6e6;
+}
+
+.close-button:focus {
+  background-color: #e6e6e6;
+  outline: 3px solid #83b3d3;
+}
+
+.close-button:active {
+  outline: none;
+}
+
+.close-button:active svg {
+  fill: rgb(0, 0, 0, 0.3);
 }
 
 .search-form {
@@ -314,6 +343,7 @@ body {
 }
 
 .search-form-group {
+  position: relative;
   width: 575px;
 }
 
@@ -348,6 +378,20 @@ body {
   border-radius: 4px;
 }
 
+.field-message {
+  position: absolute;
+  left: 155px;
+  bottom: -24px;
+
+  font-size: 16px;
+}
+
+.error-message {
+  color: #ff5757;
+}
+
+/* Counter fields with buttons */
+
 .counter .amount-field {
   width: 45px;
   padding: 10px;
@@ -375,6 +419,8 @@ body {
   width: 44px;
   height: 50px;
   padding: 0;
+
+  background-color: #f2f2f2;
   border: none;
   cursor: pointer;
 }
@@ -387,6 +433,15 @@ body {
 .counter-plus {
   border-bottom-right-radius: 4px;
   border-top-right-radius: 4px;
+}
+
+.focus-box {
+  display: block;
+  width: 22px;
+  height: 22px;
+  margin: auto;
+  background-color: transparent;
+  border-radius: 4px;
 }
 
 .counter-minus::before {
@@ -403,7 +458,16 @@ body {
   content: "";
 }
 
-.counter-minus:hover::before {
+.counter-button:focus {
+  outline: none;
+}
+
+.counter-minus:focus .focus-box {
+  outline: 3px solid #83b3d3;
+}
+
+.counter-minus:hover::before,
+.counter-minus:focus::before {
   background-color: rgb(0, 0, 0);
 }
 
@@ -436,12 +500,19 @@ body {
   content: "";
 }
 
+.counter-plus:focus .focus-box {
+  outline: 3px solid #83b3d3;
+}
+
 .counter-plus:hover::before,
-.counter-plus:hover::after {
+.counter-plus:focus::before,
+.counter-plus:hover::after,
+.counter-plus:focus::after {
   background-color: rgb(0, 0, 0);
 }
 
 .info {
+  position: relative;
   width: 25px;
   height: 25px;
   margin-left: 9px;
@@ -450,6 +521,40 @@ body {
   background-image: url("../images/icons/info.svg");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.info-block {
+  position: absolute;
+  display: none;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 256px;
+  padding: 15px 18px 18px 22px;
+
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: #000000;
+  border-radius: 10px;
+}
+
+.info-block::before {
+  position: absolute;
+  top: -19px;
+  left: 119px;
+  width: 19px;
+  height: 19px;
+  border: 9px solid #000000;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  content: "";
+}
+
+.info:hover .info-block {
+  display: block;
 }
 
 .search-form .button {

@@ -35,11 +35,15 @@
               <span class="visually-hidden">Поиск по сайту</span>
             </a>
 
-            <div class="modal-container">
+            <!-- Delete modal-close to open modal window -->
+            <div class="modal-container modal-close">
               <div class="modal-search">
                 <div class="heading-wrapper">
                   <h2 class="modal-search-title">Поиск гостиниц в Седоне</h2>
                   <button class="close-button" type="button">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="black" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14 1.29231L12.7077 0L7 5.70769L1.29231 0L0 1.29231L5.70769 7L0 12.7077L1.29231 14L7 8.29231L12.7077 14L14 12.7077L8.29231 7L14 1.29231Z"/>
+                    </svg>
                     <span class="visually-hidden">Закрыть окно</span>
                   </button>
                 </div>
@@ -47,12 +51,14 @@
                 <form class="search-form" action="https://echo.htmlacademy.ru">
                   <div class="search-form-group">
                     <label class="search-form-label" for="check-in">Дата заезда:</label>
-                    <input class="field date-field" type="text" id="chech-in" name="check-in-date" value="27 апреля 2020" required>
+                    <input class="field date-field" type="text" id="chech-in" name="check-in-date" value="27 апреля 2020" placeholder="Укажите дату" required>
+                    <div class="field-message error-message">Мы не можем отправить вас в прошлое</div>
                   </div>
 
                   <div class="search-form-group">
                     <label class="search-form-label" for="check-out">Дата выезда:</label>
-                    <input class="field date-field" type="text" id="chech-out" name="check-out-date" value="1 сентября 2021" required>
+                    <input class="field date-field" type="text" id="chech-out" name="check-out-date" value="1 сентября 2021" placeholder="Укажите дату" required>
+                    <div class="field-message">На эти даты есть свободные номера. Пока есть.</div>
                   </div>
 
                   <div class="search-form-group">
@@ -60,10 +66,12 @@
                       <label class="search-form-label" for="adults">Взрослые:</label>
                       <div class="counter">
                         <button class="counter-button counter-minus" type="button">
+                          <span class="focus-box"></span>
                           <span class="visually-hidden">Уменьшить количество</span>
                         </button>
                         <input class="field amount-field" type="number" id="adults" name="adults-amount" value="2">
                         <button class="counter-button counter-plus" type="button">
+                          <span class="focus-box"></span>
                           <span class="visually-hidden">Увеличить количество</span>
                         </button>
                       </div>
@@ -72,15 +80,18 @@
                     <div class="amount-wrapper">
                       <label class="search-form-label" for="kids">Дети:
                         <span class="info">
+                          <div class="info-block">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</div>
                           <span class="visually-hidden">Дополнительная информация</span>
                         </span>
                       </label>
                       <div class="counter">
                         <button class="counter-button counter-minus" type="button">
+                          <span class="focus-box"></span>
                           <span class="visually-hidden">Уменьшить количество</span>
                         </button>
                         <input class="field amount-field" type="number" id="kids" name="kids-amount" value="1">
                         <button class="counter-button counter-plus" type="button">
+                          <span class="focus-box"></span>
                           <span class="visually-hidden">Увеличить количество</span>
                         </button>
                       </div>
