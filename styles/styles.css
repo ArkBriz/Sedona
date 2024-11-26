@@ -257,7 +257,7 @@ body {
 }
 
 .modal-close {
-  /* display: none; */
+  display: none;
 }
 
 .modal-search {
